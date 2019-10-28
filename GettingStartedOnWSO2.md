@@ -15,19 +15,13 @@
 
 ## Invoking an API
 The new APIs use Bearer Authentication, so your request must include this in the Authorization header `Authorization: Bearer <access_token>`.
-1. You can get your Access Token using your Consumer Key and Consumer Secret in your Application's Production Keys Tab: 
+1. You can view or regenerate your Access Token in your Application's Access Token tab: 
 
-  <img src="getting-started-screenshots/Application_ProductionKeys-tab.png" alt="Application_ProductionKeys-tab" width="600"/>  
-
-  * You can use one of the two supplied cURL commands in your terminal  
-  <img src="getting-started-screenshots/GeneratingAccessToken_cURL.png" alt="GeneratingAccessToken_cURL" width="600"/>  
-
-  * Or, you can click "Generate Keys" (or "Regenerate") in the "Generate a Test Access Token" section.  This token will be then be displayed in the API console tab for a particular API when you're signed in.  
-  <img src="getting-started-screenshots/GenerateAccessToken_gui.png" alt="GenerateAccessToken_gui" width="600"/>  
+  <img src="getting-started-screenshots/Application_AccessTokenTab.png" alt="Application Access Token Tab" width="600"/>  
   
-  **Note that Access Tokens default to expire after 1 hour (3600 seconds).  This value can be adjusted to your needs, or, you can set the Validity Period to `-1` for indefinite validity.**
+  **If you regenerate the Access Token, the old Access Token expires. Only the most recent token is valid for each Application.**
 
-2. In the API Console Tab, confirm that your Access Token is present in the `Authorization : Bearer` field, and click the blue "GET" button.  In the drop down console that appears, click "Try it out".  Here, you can enter in various query parameters, and click the "Execute" button under the query parameters to execute the request. 
+2. Next, in the API Console Tab of an API to which you have subscribed, confirm that your Access Token is present in the `Authorization : Bearer` field, and click the blue "GET" button.  In the drop down console that appears, click "Try it out".  Here, you can enter in various query parameters, and click the "Execute" button under the query parameters to execute the request.  
   <img src="getting-started-screenshots/API_Console1.png" alt="API_Console1" width="500"/>
   <img src="getting-started-screenshots/API_Console2_TryItButton.png" alt="API_Console2_TryItButton" width="600"/>
   <img src="getting-started-screenshots/API_Console3_Execute.png" alt="API_Console3_Execute" width="600"/>
@@ -46,11 +40,11 @@ The new APIs use Bearer Authentication, so your request must include this in the
   * Currently, only one access token - the most recently generated, non-expired access token - is valid per application.  And at this time, each username can generate one application.
 
 * _What is the difference between API Key and Access Token? Which do I use and how?_
-  * The new API store uses the Bearer authentication scheme (also called token authentication), so instead of API keys, you have a Consumer Key and Consumer Secret, which are used to generate an Access Token.  Your application will likely use the Access Token to fetch data from the API.  
+  * The new API store uses the Bearer authentication scheme (also called token authentication), so instead of API keys, you have an Access Token.  Your application will use the Access Token to fetch data from the API. 
   For more information about the Access Token, see the instructions for [Invoking an API](#invoking-an-api).
 
 ### Throttling
-* _When setting up a new API key, I noticed it states that 100 requests are allowed per minute per access token. Is that all the information about throttling available?_ 
+* _When setting up a new API access token, I noticed it states that 100 requests are allowed per minute per access token. Is that all the information about throttling available?_ 
   * Yes.  If you have more specific questions, please email [DataServices@trade.gov](mailto:DataServices@trade.gov?subject=API%20Request%20Throttling%20Question)
 
 * _I have seen the information about the throttling. Are there any other restrictions that I should be aware of?_
@@ -67,4 +61,4 @@ The new APIs use Bearer Authentication, so your request must include this in the
   * Yes, see above.
 
 * _I have an API Key for downloading the CSV file. Do I need to get a new API key to continue downloading the CSV file?_
-  * An API key is no longer needed for downloading the CSV file: https://www.export.gov/article?id=Consolidated-Screening-List
+  * An API key is no longer needed for downloading the CSV file: [https://www.export.gov/article?id=Consolidated-Screening-List](https://www.export.gov/article?id=Consolidated-Screening-List)
