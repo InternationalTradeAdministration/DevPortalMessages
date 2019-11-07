@@ -43,6 +43,9 @@ The new APIs use Bearer Authentication, so your request must include this in the
   * The new API store uses the Bearer authentication scheme (also called token authentication), so instead of API keys, you have an Access Token.  Your application will use the Access Token to fetch data from the API. 
   For more information about the Access Token, see the instructions for [Invoking an API](#invoking-an-api).
 
+* _I see in your documentation that the creation of a new key will inactivate any old(er) keys. So, if I create a new key in the new system, will that inactivate my older key from your older system?_
+  * The current system and the new system are completed separate. Any work you do in the new system will not alter anything in the current system. The key you are currently using will continue to work. You will also need to create a new login to access our new system. In the new system we use “access tokens.” If you generate a new access token, your previously generated access token will no longer work. Again, this will not deactivate the API key that you are using from the current system.
+
 ### Throttling
 * _When setting up a new API access token, I noticed it states that 100 requests are allowed per minute per access token. Is that all the information about throttling available?_ 
   * Yes.  If you have more specific questions, please email [DataServices@trade.gov](mailto:DataServices@trade.gov?subject=API%20Request%20Throttling%20Question)
