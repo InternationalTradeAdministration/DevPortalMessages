@@ -4,13 +4,16 @@
 * [Frequently Asked Questions](#frequently-asked-questions)
 
 ## Subscribing to an API
-1. Using the Login link at the top right corner, log in to the [API store](https://api.trade.gov/apps/store/apis/list). If you have not done this before, you will first need to create an account.
-2. All our APIs are available. Click on an API to view its details.
-3. The selected API’s information will be visible. As a subscribed user, you can now add ratings and provide comments to the API, which will be moderated.
-4. An application is a logical collection of one or more APIs and is required when subscribing to an API. Select an application from the Applications drop-down list. You can use the default application or create a new one right from the drop-down list. You can view, create, rename, and delete applications from the “My Applications” tab.  
+1. Sign In using the link at the top right corner of the [API store](https://api.trade.gov/apps/store/apis/list). If you have not done this before, you will first need to create an account.
+2. Please go to the [Applications](https://api.trade.gov/apps/store/site/pages/applications.jag) page and generate an access token.
+3. All our APIs are available. Please go to the [APIs](https://api.trade.gov/apps/store/apis/list) page and click on an API to view its details.
+4. The selected API’s information will be visible.
+5. Select a service tier (currently we only have one tier) then click on the Subscribe button. If the subscription is successful, a message appears congratulating you on your successful subscription.
+
 <img src="getting-started-screenshots/Applications_mgmt.png" alt="Managing an application" width="600"/>
 
-5. Select a service tier (currently we only have one tier) then click on the Subscribe button. If the subscription is successful, a message appears congratulating you on your successful subscription.  
+  An application is a logical collection of one or more APIs and is required when subscribing to an API. You can view and manage your subscriptions from the “Applications” page.  
+  
 <img src="getting-started-screenshots/Subscribing.png" alt="Subscribing to an API" width="600"/>
 
 ## Invoking an API
