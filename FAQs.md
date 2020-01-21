@@ -59,10 +59,7 @@
 
 ## Consolidated Screening List (CSL)
 * _With the new API store, is it possible to download the entire CSL list?_
-  * While the full CSL is not downloadable from the API, you can download it from export.gov as either a [CSV](https://api.trade.gov/consolidated_screening_list/search.csv?api_key=OHZYuksFHSFao8jDXTkfiypO) or a [TSV](https://api.trade.gov/consolidated_screening_list/search.tsv?api_key=OHZYuksFHSFao8jDXTkfiypO) file.
-
-* _Are we still able to download the CSV and TSV files for the Consolidated Screening List?_
-  * Yes, see above.
+  * We are still in the process of converting the CSV and TSV download files over to the new system.  Once they are available, we will be sending out a notice via our email subscriptions. We recommend [subscribing to our emails](https://public.govdelivery.com/accounts/USITATRADE/subscriber/new?topic_id=USITATRADE_1704) so that you can be informed of any changes to our APIs.
 
 * _I have an API Key for downloading the CSV file. Do I need to get a new API key to continue downloading the CSV file?_
   * An API key is no longer needed for downloading the CSV file: [https://www.export.gov/article?id=Consolidated-Screening-List](https://www.export.gov/article?id=Consolidated-Screening-List)
