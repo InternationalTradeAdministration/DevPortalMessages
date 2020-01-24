@@ -15,14 +15,16 @@
 * _Where can I find the documentation for each of the APIs?_
   * In the API Console tab, after clicking on the `GET /search` button, you will find information on the parameters and the model for responses for that API.  The Overview tab has a brief summary about the substance and source of the data. 
 
+* _How can I subscribe to emails from Data Services for updates to the platform or APIs?_
+  * You can subscribe by clicking this link: [https://public.govdelivery.com/accounts/USITATRADE/subscriber/new?topic_id=USITATRADE_1704](https://public.govdelivery.com/accounts/USITATRADE/subscriber/new?topic_id=USITATRADE_1704)
+
 ## API Keys, Access Tokens and Bearer Codes
 * _With the new system, can I just switch out the `api_key` parameter with `bearer_code`?_
   * No, the new platform requires every HTTP client to send search requests with an access token in the HTTP request header. This is the only supported authentication scheme. It does not support authentication using the URL query string.
 
     If you need to see the results in a web browser, you can use the existing console in our API platform or you will need to use a browser extension, such as the [Advanced REST Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo/related?hl=en-US). This is not a recommendation for this product, but rather an example of a browser extension that could be used for this function.
 
-* _The downloadable CSV and TSV files still appear to be using the old links. When will the new links be available?_
-  * We are still in the process of converting the CSV and TSV download files over to the new system. Once they are available, we will be sending out a notice via our email subscriptions. We recommend [subscribing to our emails](https://public.govdelivery.com/accounts/USITATRADE/subscriber/new?topic_id=USITATRADE_1704) so that you can be informed of any changes to our APIs.
+    For additional help with making HTTP requests using your access token, see [How to interact with the APIs using the new authentication type](https://internationaltradeadministration.github.io/DevPortalMessages/IntroToNewAuthType)  
 
 * _How can I obtain an access token for production and another one for prototype?_
   * Currently, only one access token - the most recently generated, non-expired access token - is valid per application.  And at this time, each username can generate one application.
@@ -55,17 +57,17 @@
   * See the [Terms of Service](https://api.trade.gov/apps/store/ita/terms-of-service) for more information.
 
 * _How can we get the ability to run more than 100 requests per minute and what would the prices be?_
-  * We are looking into offering higher limits of throughput. We will send out an email with additional information once we have additional information.
+  * We are looking into offering higher limits of throughput. We will send out an [email](https://public.govdelivery.com/accounts/USITATRADE/subscriber/new?topic_id=USITATRADE_1704) with additional information once we have additional information.
 
 ## Consolidated Screening List (CSL)
 * _With the new API store, is it possible to download the entire CSL list?_
-  * We are still in the process of converting the CSV and TSV download files over to the new system.  Once they are available, we will be sending out a notice via our email subscriptions. We recommend [subscribing to our emails](https://public.govdelivery.com/accounts/USITATRADE/subscriber/new?topic_id=USITATRADE_1704) so that you can be informed of any changes to our APIs.
+  * Yes. For customers wishing to batch process their queries with multiple threads over a shorter period of time, we recommend downloading the full CSL as either a [CSV](http://api.trade.gov/static/consolidated_screening_list/consolidated.csv) or a [TSV](http://api.trade.gov/static/consolidated_screening_list/consolidated.tsv) and running the queries locally.
 
 * _I have an API Key for downloading the CSV file. Do I need to get a new API key to continue downloading the CSV file?_
-  * An API key is no longer needed for downloading the CSV file: [https://www.export.gov/article?id=Consolidated-Screening-List](https://www.export.gov/article?id=Consolidated-Screening-List)
+  * An API key is no longer needed for downloading the [CSV](http://api.trade.gov/static/consolidated_screening_list/consolidated.csv) or [TSV](http://api.trade.gov/static/consolidated_screening_list/consolidated.tsv) file.
 
 ## Errors
-* _When subscribing to an API I receive the error Application is not accessible to the user._
+* _When subscribing to an API I receive the error "Application is not accessible to the user."_
   * This occurs when you have already subscribed to the API and are trying to subscribe again. To verify that you have already subscribed:
     * Go to your Applications page: https://api.trade.gov/apps/store/site/pages/applications.jag
     * Click on "DefaultApplication"
