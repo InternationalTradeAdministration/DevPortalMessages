@@ -37,6 +37,29 @@
   * The current system and the new system are completed separate. Any work you do in the new system will not alter anything in the current system. The key you are currently using will continue to work. You will also need to create a new login to access our new system. In the new system we use “access tokens.” If you generate a new access token, your previously generated access token will no longer work. Again, this will not deactivate the API key that you are using from the current system.
 
 ## Throttling
+* _How does throttling work?_
+  * For each access token, the system will process up to 100 requests per minute for a given API.  
+  * The quota for each access token is reset at the start of every minute.  
+  * Here is a scenario:  
+    * A user signed up for an account, generated an access token and subscribed to the Consolidated Screening List (CSL).  
+    * By default, every account is allowed to send up to 100 CSL requests per minute.  
+    * At 3:10:15 PM, this user starts to send 5 CSL requests per minute.  
+    * The system will allow the first 100 requests to go through.  
+    * A successful request will return with HTTP status code `200` along with the JSON response.  
+    * Once the 100 requests per minute quota is exceeded, subsequent CSL requests from this account before 3:11:00 PM will be rejected with HTTP status code `429` along with the following JSON response:  
+    ```json
+    {
+      "fault": {
+        "code": 900804,
+        "message": "Message throttled out",
+        "description": "You have exceeded your quota",
+        "nextAccessTime": "2020-Jan-08 15:11:00+0000 UTC"
+      }
+    }
+    ```
+    * At 3:11:00 PM, the quota for this account will reset and the system will begin to process CSL requests from that account again.  
+​
+​
 * _What is the error code returned when my access token is throttled?_
   * The API returns with HTTP status `429` on requests that have reached the throttle limit. Here is an example of the JSON body in the response:
     ```js
