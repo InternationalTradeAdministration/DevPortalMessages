@@ -63,7 +63,7 @@
 ​
 * _What is the error code returned when my access token is throttled?_
   * The API returns with HTTP status `429` on requests that have reached the throttle limit. Here is an example of the JSON body in the response:
-    ```js
+    ```json
     {
       "fault": {
         "code": 900804,
