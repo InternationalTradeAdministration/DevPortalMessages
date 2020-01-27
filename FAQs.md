@@ -43,10 +43,10 @@
   * Here is a scenario:  
     * A user signed up for an account, generated an access token and subscribed to the Consolidated Screening List (CSL).  
     * By default, every account is allowed to send up to 100 CSL requests per minute.  
-    * At 3:10:15 PM, this user starts to send 5 CSL requests per minute.  
+    * At 3:10:15 PM, this user starts to send 500 CSL requests per minute.  
     * The system will allow the first 100 requests to go through.  
-    * A successful request will return with HTTP status code `200` along with the JSON response.  
-    * Once the 100 requests per minute quota is exceeded, subsequent CSL requests from this account before 3:11:00 PM will be rejected with HTTP status code `429` along with the following JSON response:  
+      * A successful request will return with HTTP status code `200` along with the JSON response.  
+    * Since the 100 requests per minute quota was exceeded, subsequent CSL requests from this account before 3:11:00 PM (in this example, request #101-500) will be rejected with HTTP status code `429` along with the following JSON response:  
     ```json
     {
       "fault": {
@@ -58,11 +58,12 @@
     }
     ```
     * At 3:11:00 PM, the quota for this account will reset and the system will begin to process CSL requests from that account again.  
+    * Previously rejected requests may be resubmitted at that time, provided the account is within the throttling threshold.
 ​
 ​
 * _What is the error code returned when my access token is throttled?_
   * The API returns with HTTP status `429` on requests that have reached the throttle limit. Here is an example of the JSON body in the response:
-    ```js
+    ```json
     {
       "fault": {
         "code": 900804,
